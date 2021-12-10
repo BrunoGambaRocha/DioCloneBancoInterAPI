@@ -154,3 +154,7 @@ Bruno Gamba Rocha
 #### Criando e Testando o user.controllers
 
 <img src="/backend/screenshots/screenshot-05.png"/> 
+
+#### Criando as Interfaces de user.dtos
+
+<img src="/backend/screenshots/screenshot-06.png"/> 
