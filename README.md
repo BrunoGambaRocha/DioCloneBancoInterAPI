@@ -135,3 +135,7 @@ Bruno Gamba Rocha
 #### Testantando ambiente
 
 <img src="/backend/screenshots/screenshot-01.png"/> 
+
+#### Configurando o Docker e PostgreSQL
+
+<img src="/backend/screenshots/screenshot-02.png"/> 
