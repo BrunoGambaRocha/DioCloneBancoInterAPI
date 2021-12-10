@@ -1,7 +1,7 @@
 version: '3.1'
 
 services:
- db:
+  db:
     container_name: dio
     image: postgres
     restart: always

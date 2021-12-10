@@ -1,6 +1,6 @@
 # Dio Clone Banco Inter API
 
-Em estudo: 09/12/2021
+Em estudo: 10/12/2021
 
 Semana Frontend Inter - 06 a 09/12/2021
 
@@ -57,7 +57,7 @@ Bruno Gamba Rocha
 - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
-- [DBeaver]()
+- [DBeaver](https://dbeaver.io/)
 
 
 
@@ -109,15 +109,17 @@ Bruno Gamba Rocha
 
 ``` yarn start:dev ```
 
-- Verificando a versão do Docker. Iniciando a máquina virtual. Iniciando a instância com as imagens do docker-compose. Verificando serviços em execução.
+- Verificando a versão do Docker. Iniciando a máquina virtual. Iniciando a instância com as imagens do docker-compose. Verificando serviços em execução. Obtendo IP da máquina virtual.
 
 ``` docker --version ``` 
 
 ``` docker-machine start default ```
 
-``` docker-compose up ``` 
+``` docker-compose up -d ``` 
 
 ``` docker ps ``` 
+
+``` docker-machine ip ``` 
 
 
 <hr>
@@ -139,3 +141,7 @@ Bruno Gamba Rocha
 #### Configurando o Docker e PostgreSQL
 
 <img src="/backend/screenshots/screenshot-02.png"/> 
+
+#### Configurando o TypeOrm, criando as Entitys e Tabelas no BD
+
+<img src="/backend/screenshots/screenshot-03.png"/> 
