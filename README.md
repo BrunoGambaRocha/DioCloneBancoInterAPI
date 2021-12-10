@@ -57,6 +57,7 @@ Bruno Gamba Rocha
 - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
+- [DBeaver]()
 
 
 
@@ -108,6 +109,15 @@ Bruno Gamba Rocha
 
 ``` yarn start:dev ```
 
+- Verificando a versão do Docker. Iniciando a máquina virtual. Iniciando a instância com as imagens do docker-compose. Verificando serviços em execução.
+
+``` docker --version ``` 
+
+``` docker-machine start default ```
+
+``` docker-compose up ``` 
+
+``` docker ps ``` 
 
 
 <hr>
