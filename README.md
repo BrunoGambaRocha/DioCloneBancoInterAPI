@@ -58,6 +58,7 @@ Bruno Gamba Rocha
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
 - [DBeaver](https://dbeaver.io/)
+- [Aquitetura REST](https://pt.wikipedia.org/wiki/REST)
 
 
 
@@ -145,3 +146,7 @@ Bruno Gamba Rocha
 #### Configurando o TypeOrm, criando as Entitys e Tabelas no BD
 
 <img src="/backend/screenshots/screenshot-03.png"/> 
+
+#### Criando e Testando a base das Rotas
+
+<img src="/backend/screenshots/screenshot-04.png"/> 
