@@ -150,3 +150,7 @@ Bruno Gamba Rocha
 #### Criando e Testando a base das Rotas
 
 <img src="/backend/screenshots/screenshot-04.png"/> 
+
+#### Criando e Testando o user.controllers
+
+<img src="/backend/screenshots/screenshot-05.png"/> 
