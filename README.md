@@ -102,6 +102,13 @@ Bruno Gamba Rocha
 
 ``` npm install nodemon ```
 
+``` yarn add crypto-js ```
+
+``` yarn add @types/crypto-js -D ```
+
+``` yarn add express-async-errors ```
+
+
 - Caso VS Code não execute o Power Shell. Abra o Power Shell como Administrador, execute o comando abaixo e confirme.
 
 ``` Set-ExecutionPolicy ByPass ```
@@ -158,3 +165,7 @@ Bruno Gamba Rocha
 #### Criando as Interfaces de user.dtos
 
 <img src="/backend/screenshots/screenshot-06.png"/> 
+
+#### Criando e Testando user.service, middlewares globalErros, shared error AppError
+
+<img src="/backend/screenshots/screenshot-07.png"/> 
