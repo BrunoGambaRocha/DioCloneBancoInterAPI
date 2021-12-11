@@ -1,6 +1,6 @@
 # Dio Clone Banco Inter API
 
-Em estudo: 10/12/2021
+Em estudo: 11/12/2021
 
 Semana Frontend Inter - 06 a 09/12/2021
 
@@ -108,6 +108,11 @@ Bruno Gamba Rocha
 
 ``` yarn add express-async-errors ```
 
+``` yarn add jsonwebtoken ```
+
+``` yarn add @types/jsonwebtoken -D ```
+
+
 
 - Caso VS Code não execute o Power Shell. Abra o Power Shell como Administrador, execute o comando abaixo e confirme.
 
@@ -135,6 +140,9 @@ Bruno Gamba Rocha
 ## Material complementar
 
 - [Configurando ESLint no Node com Express e Typescript](https://dev.to/melquisedecfelipe/configurando-eslint-no-node-com-express-e-typescript-58p9)
+
+- [Introduction to JSON Web Tokens](https://jwt.io/introduction)
+- [JsonWebToken implementation for node.js](https://github.com/auth0/node-jsonwebtoken)
 
 
 
