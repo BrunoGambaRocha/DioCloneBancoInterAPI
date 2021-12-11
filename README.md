@@ -112,6 +112,8 @@ Bruno Gamba Rocha
 
 ``` yarn add @types/jsonwebtoken -D ```
 
+``` yarn add js-base64 ```
+
 
 - Caso VS Code não execute o Power Shell. Abra o Power Shell como Administrador, execute o comando abaixo e confirme.
 
@@ -184,3 +186,7 @@ Bruno Gamba Rocha
 #### Criando e Testando user.service.signup
 
 <img src="/backend/screenshots/screenshot-09.png"/> 
+
+#### Criando pix interface, controllers, service, middleware, rotas
+
+<img src="/backend/screenshots/screenshot-10.png"/> 
