@@ -177,3 +177,7 @@ Bruno Gamba Rocha
 #### Criando e Testando user.service, middlewares globalErros, shared error AppError
 
 <img src="/backend/screenshots/screenshot-07.png"/> 
+
+#### Configurando JWT user.service
+
+<img src="/backend/screenshots/screenshot-08.png"/> 
