@@ -113,7 +113,6 @@ Bruno Gamba Rocha
 ``` yarn add @types/jsonwebtoken -D ```
 
 
-
 - Caso VS Code não execute o Power Shell. Abra o Power Shell como Administrador, execute o comando abaixo e confirme.
 
 ``` Set-ExecutionPolicy ByPass ```
@@ -181,3 +180,7 @@ Bruno Gamba Rocha
 #### Configurando JWT user.service
 
 <img src="/backend/screenshots/screenshot-08.png"/> 
+
+#### Criando e Testando user.service.signup
+
+<img src="/backend/screenshots/screenshot-09.png"/> 
