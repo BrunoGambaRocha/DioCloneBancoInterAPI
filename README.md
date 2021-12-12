@@ -37,19 +37,9 @@ Bruno Gamba Rocha
 
 ## Tecnologias Utilizadas
 
-- [Node.js](https://nodejs.org/pt-br/docs/)
-- [React.js](https://pt-br.reactjs.org/docs/getting-started.html)
+#### Ambiente Desenvolvimento
 - [npm](https://docs.npmjs.com/)
 - [yarn](https://classic.yarnpkg.com/en/docs)
-- [Express](https://expressjs.com/pt-br/)
-- [TypeScript](https://www.typescriptlang.org/docs/)
-- [TypeOrm](https://typeorm.io/)
-- [PostgreSQL](https://www.postgresql.org/docs/8.1/index.html)
-- [Nodemon](https://www.npmjs.com/package/nodemon)
-- [JsonWebToken](https://www.npmjs.com/package/jsonwebtoken)
-- [Crypto-JS](https://www.npmjs.com/package/crypto-js)
-- [express-async-erros](https://www.npmjs.com/package/express-async-errors)
-- [Styled-Components](https://styled-components.com/docs)
 - [Docker](https://docs.docker.com/)
 - [Git](https://git-scm.com/doc/)
 - [VS Code](https://code.visualstudio.com/)
@@ -58,8 +48,23 @@ Bruno Gamba Rocha
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
 - [DBeaver](https://dbeaver.io/)
+
+#### Backend
+- [Node.js](https://nodejs.org/pt-br/docs/)
+- [Express](https://expressjs.com/pt-br/)
+- [TypeScript](https://www.typescriptlang.org/docs/)
+- [TypeOrm](https://typeorm.io/)
+- [PostgreSQL](https://www.postgresql.org/docs/8.1/index.html)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
+- [JsonWebToken](https://www.npmjs.com/package/jsonwebtoken)
+- [Crypto-JS](https://www.npmjs.com/package/crypto-js)
+- [express-async-erros](https://www.npmjs.com/package/express-async-errors)
 - [Aquitetura REST](https://pt.wikipedia.org/wiki/REST)
 
+#### Frontend
+- [React.js](https://pt-br.reactjs.org/docs/getting-started.html)
+- [React Router](https://reactrouter.com/docs/pt-br/v6)
+- [Styled-Components](https://styled-components.com/docs)
 
 
 <hr>
@@ -135,6 +140,17 @@ Bruno Gamba Rocha
 
 ``` docker-machine ip ``` 
 
+#### Abrir VS Code, selecionar a pasta do projeto frontend
+
+- Alterar para a branch "template"
+
+``` git checkout template ```
+	
+- Executar comandos abaixo, linha a linha, para baixar as dependências
+
+``` yarn i ```
+
+``` yarn start ```
 
 <hr>
 
@@ -146,10 +162,9 @@ Bruno Gamba Rocha
 - [JsonWebToken implementation for node.js](https://github.com/auth0/node-jsonwebtoken)
 
 
-
 <hr>
 
-## Andamento
+## Andamento Backend
 
 #### Testantando ambiente
 
@@ -194,3 +209,12 @@ Bruno Gamba Rocha
 #### Correção regras de negócio pix.pay
 
 <img src="/backend/screenshots/screenshot-11.png"/> 
+
+
+<hr>
+
+## Andamento Frontend
+
+#### Testando o ambiente
+
+<img src="/frontend/screenshots/screenshot-01.png"/> 

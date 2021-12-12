@@ -10,7 +10,6 @@ import AppError from '../../shared/error/AppError';
 export default class UserService {
 
 	async signin(user: UserSignIn) {
-
 		const userRepository = getRepository(User);
 
 		const { email, password } = user;
@@ -43,7 +42,6 @@ export default class UserService {
 	}
 
 	async signup(user: UserSignUp) {
-
 		const userRepository = getRepository(User);
 
 		const existUser = await userRepository.findOne({ where: { email: user.email } })
@@ -79,4 +77,17 @@ export default class UserService {
 		return { accessToken: token }
 	}
 
+	async me(user: Partial<User>) {
+		const userRepository = getRepository(User);
+		const currentUser = await userRepository.findOne({ where: { id: user.id } });
+
+		if (!currentUser) {
+			throw new AppError('Usuário não encontrado', 401);
+		}
+
+		// @ts-expect-error ignora
+		delete currentUser.password
+
+		return currentUser;
+	}
 }
