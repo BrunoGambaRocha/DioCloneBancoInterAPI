@@ -190,3 +190,7 @@ Bruno Gamba Rocha
 #### Criando pix interface, controllers, service, middleware, rotas
 
 <img src="/backend/screenshots/screenshot-10.png"/> 
+
+#### Correção regras de negócio pix.pay
+
+<img src="/backend/screenshots/screenshot-11.png"/> 

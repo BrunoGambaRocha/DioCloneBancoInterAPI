@@ -37,7 +37,7 @@ export default class PixService {
 		const requestingUser = await userRepository.findOne({ where: { id: keyDecoded.userId } });
 		const payingUser = await userRepository.findOne({ where: { id: user.id } });
 
-		if (payingUser?.wallet && payingUser.wallet < Number(keyDecoded.value)) {
+		if (Number(payingUser?.wallet) - Number(keyDecoded.value) < 0) {
 			throw new AppError('Não há saldo suficiente para fazer o pagamento', 401);
 		}
 
@@ -45,37 +45,36 @@ export default class PixService {
 			throw new AppError('Não encontramos os clientes da transação, gere uma nova chave', 401);
 		}
 
-		requestingUser.wallet = Number(requestingUser?.wallet) + Number(keyDecoded.value);
-		await userRepository.save(requestingUser)
-
-		payingUser.wallet = Number(payingUser?.wallet) - Number(keyDecoded.value);
-		await userRepository.save(payingUser)
-
-		const pixTransaction = await pixRepository.findOne({ where: { id: keyDecoded.registerId, status: 'open' } })
+		const pixTransaction = await pixRepository.findOne({ where: { id: keyDecoded.registerId, status: 'open' } });
 
 		if (!pixTransaction) {
-			throw new AppError('Chave inválida para pagamento', 401)
+			throw new AppError('Chave inválida para pagamento', 401);
 		}
 
+		payingUser.wallet = Number(payingUser?.wallet) - Number(keyDecoded.value);
+		await userRepository.save(payingUser);
+
+		requestingUser.wallet = Number(requestingUser?.wallet) + Number(keyDecoded.value);
+		await userRepository.save(requestingUser);
+
 		pixTransaction.status = 'close';
-		pixTransaction.payingUser = payingUser
+		pixTransaction.payingUser = payingUser;
+		await pixRepository.save(pixTransaction);
 
-		await pixRepository.save(pixTransaction)
-
-		return { mag: 'Pagamento efetuado com sucesso' }
+		return { msg: 'Pagamento efetuado com sucesso' }
 	}
 
 	async transactions(user: Partial<User>) {
 		const pixRepository = getRepository(Pix);
 
-		const pixReceived = await (await pixRepository.find({ where: { requestingUser: user.id, status: 'close' }, relations: ['payingUser'] }));
+		const pixReceived = await pixRepository.find({ where: { requestingUser: user.id, status: 'close' }, relations: ['payingUser'] });
 		const pixPaying = await pixRepository.find({ where: { payingUser: user.id, status: 'close' }, relations: ['requestingUser'] });
 
 		const received = pixReceived.map(transaction => ({
 			value: transaction.value,
 			user: {
 				firstname: transaction.payingUser.firstName,
-				lastName: transaction.payingUser.lastName,
+				lastName: transaction.payingUser.lastName
 			},
 			updatedAt: transaction.updatedAt,
 			type: 'received'
@@ -85,7 +84,7 @@ export default class PixService {
 			value: transaction.value,
 			user: {
 				firstname: transaction.requestingUser.firstName,
-				lastName: transaction.requestingUser.lastName,
+				lastName: transaction.requestingUser.lastName
 			},
 			updatedAt: transaction.updatedAt,
 			type: 'paid'

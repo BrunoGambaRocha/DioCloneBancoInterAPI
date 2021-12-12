@@ -5,11 +5,11 @@ import PixController from '../resources/pix/pix.controllers';
 const pixRouter = Router();
 const pixController = new PixController();
 
-pixRouter.use(userAuthenticated)
+pixRouter.use(userAuthenticated);
 
 //pixRouter.post('/request', userAuthenticated, pixController.request);  //Exemplo middleware somente na rota
-pixRouter.post('/request', pixController.request)
-pixRouter.post('/pay/:key', pixController.pay)
-pixRouter.get('/transactions', pixController.transactions)
+pixRouter.post('/request', pixController.request);
+pixRouter.post('/pay/:key', pixController.pay);
+pixRouter.get('/transactions', pixController.transactions);
 
 export default pixRouter;
